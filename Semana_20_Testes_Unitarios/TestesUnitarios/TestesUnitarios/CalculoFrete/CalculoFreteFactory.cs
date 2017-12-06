@@ -12,7 +12,8 @@ namespace TestesUnitarios.CalculoFrete
             this.calculosFrete = new Dictionary<TipoFrete, CalculoFreteBase>
             {
                 { TipoFrete.PAC, new FretePAC() },
-                { TipoFrete.Sedex, new FreteSedex() }
+                { TipoFrete.Sedex, new FreteSedex() },
+                { TipoFrete.Transportadora, new FreteTransportadora() },
             };
         }
 
