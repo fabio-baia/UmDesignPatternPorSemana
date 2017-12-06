@@ -1,6 +1,6 @@
 ﻿namespace TestesUnitarios.CalculoFrete
 {
-    public class FretePAC : FreteBase
+    public class FretePAC : CalculoFreteBase
     {
         public FretePAC()
         {

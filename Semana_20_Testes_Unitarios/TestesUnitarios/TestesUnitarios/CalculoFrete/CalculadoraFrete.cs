@@ -2,16 +2,16 @@
 {
     public class CalculadoraFrete : ICalculadoraFrete
     {
-        FreteBase tipoFrete;
+        private ICalculoFreteFactory calculoFreteFactory;
 
-        public CalculadoraFrete(FreteBase tipoFrete)
+        public CalculadoraFrete(ICalculoFreteFactory calculoFreteFactory)
         {
-            this.tipoFrete = tipoFrete;
+            this.calculoFreteFactory = calculoFreteFactory;
         }
 
-        public decimal Calcular(int quilometros)
+        public decimal Calcular(TipoFrete tipoFrete, int quilometros)
         {
-            return tipoFrete.Calcular(quilometros);
+            return this.calculoFreteFactory.ObterCalculoFrete(tipoFrete).Calcular(quilometros);
         }
     }
 }

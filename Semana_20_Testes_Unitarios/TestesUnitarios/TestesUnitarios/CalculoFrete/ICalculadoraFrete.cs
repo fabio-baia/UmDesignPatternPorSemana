@@ -2,6 +2,6 @@
 {
     public interface ICalculadoraFrete
     {
-        decimal Calcular(int quilometros);
+        decimal Calcular(TipoFrete tipoFrete, int quilometros);
     }
 }

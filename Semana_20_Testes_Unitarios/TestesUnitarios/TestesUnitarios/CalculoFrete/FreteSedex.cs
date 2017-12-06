@@ -1,6 +1,6 @@
 ﻿namespace TestesUnitarios.CalculoFrete
 {
-    public class FreteSedex : FreteBase
+    public class FreteSedex : CalculoFreteBase
     {
         public FreteSedex()
         {

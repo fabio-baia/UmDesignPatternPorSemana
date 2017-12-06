@@ -1,6 +1,6 @@
 ﻿namespace TestesUnitarios.CalculoFrete
 {
-    public abstract class FreteBase
+    public abstract class CalculoFreteBase
     {
         public decimal ValorAbaixoLimite { get; protected set; }
         public decimal ValorAcimaLimite { get; protected set; }
