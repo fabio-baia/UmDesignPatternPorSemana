@@ -25,5 +25,25 @@ namespace TestesUnitarios.Tests.CalculoFrete
 
             Assert.AreEqual(37.5, resultado);
         }
+
+        [Test]
+        public void DeveCalcularFreteViaSedexParaDistanciaMenorQue100km()
+        {
+            var calculadoraFrete = new CalculadoraFrete(new FreteSedex());
+
+            var resultado = calculadoraFrete.Calcular(50);
+
+            Assert.AreEqual(20, resultado);
+        }
+
+        [Test]
+        public void DeveCalcularFreteViaSedexParaDistanciaMaiorQue100km()
+        {
+            var calculadoraFrete = new CalculadoraFrete(new FreteSedex());
+
+            var resultado = calculadoraFrete.Calcular(150);
+
+            Assert.AreEqual(105, resultado);
+        }
     }
 }
