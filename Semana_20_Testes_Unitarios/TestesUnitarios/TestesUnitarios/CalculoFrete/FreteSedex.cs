@@ -1,13 +1,11 @@
 ﻿namespace TestesUnitarios.CalculoFrete
 {
-    public class FreteSedex : ITipoFrete
+    public class FreteSedex : FreteBase
     {
-        public decimal Calcular(int quilometros)
+        public FreteSedex()
         {
-            if (quilometros < 100)
-                return quilometros * 0.40m;
-
-            return quilometros * 0.70m;
+            ValorAbaixoLimite = 0.40m;
+            ValorAcimaLimite = 0.70m;
         }
     }
 }

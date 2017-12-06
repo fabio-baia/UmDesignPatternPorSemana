@@ -1,13 +1,11 @@
 ﻿namespace TestesUnitarios.CalculoFrete
 {
-    public class FretePAC : ITipoFrete
+    public class FretePAC : FreteBase
     {
-        public decimal Calcular(int quilometros)
+        public FretePAC()
         {
-            if (quilometros < 100)
-                return quilometros * 0.15m;
-
-            return quilometros * 0.25m;
+            ValorAbaixoLimite = 0.15m;
+            ValorAcimaLimite = 0.25m;
         }
     }
 }

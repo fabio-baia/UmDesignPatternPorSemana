@@ -2,9 +2,9 @@
 {
     public class CalculadoraFrete : ICalculadoraFrete
     {
-        ITipoFrete tipoFrete;
+        FreteBase tipoFrete;
 
-        public CalculadoraFrete(ITipoFrete tipoFrete)
+        public CalculadoraFrete(FreteBase tipoFrete)
         {
             this.tipoFrete = tipoFrete;
         }
