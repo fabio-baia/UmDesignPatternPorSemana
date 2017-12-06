@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculoFrete\CalculadoraFrete.cs" />
+    <Compile Include="CalculoFrete\FretePAC.cs" />
+    <Compile Include="CalculoFrete\ICalculadoraFrete.cs" />
+    <Compile Include="CalculoFrete\ITipoFrete.cs" />
     <Compile Include="EnvioLote\Evento.cs" />
     <Compile Include="EnvioLote\Guia.cs" />
     <Compile Include="EnvioLote\Lote.cs" />
