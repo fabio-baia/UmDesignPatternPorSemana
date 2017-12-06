@@ -49,6 +49,7 @@
     <Compile Include="CalculoFrete\CalculadoraFrete.cs" />
     <Compile Include="CalculoFrete\CalculoFreteBase.cs" />
     <Compile Include="CalculoFrete\CalculoFreteFactory.cs" />
+    <Compile Include="CalculoFrete\FreteRetiradaNoLocal.cs" />
     <Compile Include="CalculoFrete\FretePAC.cs" />
     <Compile Include="CalculoFrete\FreteSedex.cs" />
     <Compile Include="CalculoFrete\FreteTransportadora.cs" />

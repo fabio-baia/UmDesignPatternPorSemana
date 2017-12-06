@@ -14,6 +14,7 @@ namespace TestesUnitarios.CalculoFrete
                 { TipoFrete.PAC, new FretePAC() },
                 { TipoFrete.Sedex, new FreteSedex() },
                 { TipoFrete.Transportadora, new FreteTransportadora() },
+                { TipoFrete.RetiradaNoLocal, new FreteRetiradaNoLocal() },
             };
         }
 
