@@ -20,36 +20,15 @@ namespace TestesUnitarios.Tests.CalculoFrete
             calculadoraFrete = new CalculadoraFrete(calculoFreteFactory);
         }
 
-        [Test]
-        public void DeveCalcularFreteViaPACParaDistanciaMenorQue100km()
+        [TestCase(TipoFrete.PAC, 50, 7.5, TestName = "Deve calcular frete PAC para distancia MENOR que 100km")]
+        [TestCase(TipoFrete.PAC, 150, 37.5, TestName = "Deve calcular frete PAC para distancia MAIOR que 100km ")]
+        [TestCase(TipoFrete.Sedex, 50, 20, TestName = "Deve calcular frete Sedex para distancia MENOR que 100km ")]
+        [TestCase(TipoFrete.Sedex, 150, 105, TestName = "Deve calcular frete Sedex para distancia MAIOR que 100km ")]
+        public void DeveCalcularFreteCorretamente(TipoFrete tipoFrete, int quilometros, decimal valorEsperado)
         {
-            var resultado = calculadoraFrete.Calcular(TipoFrete.PAC, 50);
+            var resultado = calculadoraFrete.Calcular(tipoFrete, quilometros);
 
-            Assert.AreEqual(7.5, resultado);
-        }
-
-        [Test]
-        public void DeveCalcularFreteViaPACParaDistanciaMaiorQue100km()
-        {
-            var resultado = calculadoraFrete.Calcular(TipoFrete.PAC, 150);
-
-            Assert.AreEqual(37.5, resultado);
-        }
-
-        [Test]
-        public void DeveCalcularFreteViaSedexParaDistanciaMenorQue100km()
-        {
-            var resultado = calculadoraFrete.Calcular(TipoFrete.Sedex, 50);
-
-            Assert.AreEqual(20, resultado);
-        }
-
-        [Test]
-        public void DeveCalcularFreteViaSedexParaDistanciaMaiorQue100km()
-        {
-            var resultado = calculadoraFrete.Calcular(TipoFrete.Sedex, 150);
-
-            Assert.AreEqual(105, resultado);
+            Assert.AreEqual(valorEsperado, resultado);
         }
     }
 }
