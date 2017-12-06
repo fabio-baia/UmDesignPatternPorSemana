@@ -16,6 +16,7 @@ namespace TestesUnitarios.Tests.CalculoFrete
             calculoFreteFactory = Substitute.For<ICalculoFreteFactory>();
             calculoFreteFactory.ObterCalculoFrete(TipoFrete.PAC).Returns(new FretePAC());
             calculoFreteFactory.ObterCalculoFrete(TipoFrete.Sedex).Returns(new FreteSedex());
+            calculoFreteFactory.ObterCalculoFrete(TipoFrete.Transportadora).Returns(new FreteTransportadora());
 
             calculadoraFrete = new CalculadoraFrete(calculoFreteFactory);
         }
