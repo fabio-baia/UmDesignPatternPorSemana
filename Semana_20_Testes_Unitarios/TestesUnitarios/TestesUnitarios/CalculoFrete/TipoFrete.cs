@@ -4,6 +4,7 @@
     {
         PAC,
         Sedex,
-        Transportadora
+        Transportadora,
+        RetiradaNoLocal
     }
 }
