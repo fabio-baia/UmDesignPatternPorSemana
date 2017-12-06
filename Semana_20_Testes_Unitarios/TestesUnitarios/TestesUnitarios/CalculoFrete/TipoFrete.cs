@@ -3,6 +3,7 @@
     public enum TipoFrete
     {
         PAC,
-        Sedex
+        Sedex,
+        Transportadora
     }
 }
